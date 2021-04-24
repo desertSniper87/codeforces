@@ -9,11 +9,16 @@ def table_generator(i, j, k):
 
 # def check_positive(i, j, k):
     # if 
+def swapVars(i, j, k):
+    lst = sorted([i, j, k])
+    mdl = lst[len(lst) // 2]
+
+    return min(lst), mdl, max(lst)
+
 
 def serve_dish(i, j, k):
     bgn_tple = (i,j,k)
-    for o in sorted(list(i, j, k)):
-        print(o)
+    i, j, k = swapVars(i, j, k)
     result = set()
     for w in table_generator(i, j, k):
         # print(w)
